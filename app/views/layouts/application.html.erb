@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ToDo2</title>
+    <title><%= yield(:title) %></title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,14 @@
   </head>
 
   <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>To Do List</h1>
+      </div>
+    </div>
+    <%= flash[:alert] %>
+    <%= flash[:notice] %>
+
     <%= yield %>
   </body>
 </html>

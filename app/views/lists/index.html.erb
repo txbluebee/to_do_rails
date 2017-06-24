@@ -1,10 +1,10 @@
+<% content_for(:title, "Lists")  %>
 <h1>Lists</h1>
-
+<%= image_tag 'dog.png' %>
 <ul>
   <% @lists.each do |list| %>
     <li><%= link_to list.name, list_path(list) %></li>
   <% end %>
 </ul>
-
 
 <%= link_to "New List", new_list_path %>
